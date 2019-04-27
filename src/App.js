@@ -1,24 +1,70 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <nav class="navbar navbar-light bg-light">
+        <p class="navbar-text">Clicky Cat</p>
+        <p>You guessed</p>
+        <p>Score: | Top Score:</p>
+      </nav>
+      <div className="jumbotron">
+        <h1>Clicky Cat</h1>
+        <p>Pet each kitty one time and one time only!</p>
+        <p>The game ends when you click any image more than once.</p>
+      </div>
+      <div className="imageGrid">
+        {/* TODO:
+        1. Create image array
+        2. Use .map() to loop through each item in the array and
+        3. Assign a random number: Math.floor(Math.random()*10 +1)
+        */}
+        <div class="container">
+          <div class="row">
+            <div class="col-sm">
+              1
+            </div>
+            <div class="col-sm">
+              2
+            </div>
+            <div class="col-sm">
+              3
+            </div>
+            <div class="col-sm">
+              4
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm">
+              1
+            </div>
+            <div class="col-sm">
+              2
+            </div>
+            <div class="col-sm">
+              3
+            </div>
+            <div class="col-sm">
+              4
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm">
+              1
+            </div>
+            <div class="col-sm">
+              2
+            </div>
+            <div class="col-sm">
+              3
+            </div>
+            <div class="col-sm">
+              4
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
