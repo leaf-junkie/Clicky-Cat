@@ -1,6 +1,3 @@
-// x: x-coordinate, randomly assigned on click
-// y: y-coordinate, randomly assigned on click
-// clicked: false by default until clicked
 [
     {
         "id": 1,

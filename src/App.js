@@ -1,31 +1,44 @@
 import React from 'react';
 import './App.css';
+import { ScreenClassProvider } from 'react-grid-system';
+import { Container, Row, Col } from '../src/components/Grid/index'
 
-function App() {
-  return (
-    <div className="App">
-     <nav class="navbar navbar-light bg-light">
-        <p class="navbar-text">Clicky Cat</p>
-        <p>You guessed</p>
-        <p>Score: | Top Score:</p>
-      </nav>
-      <div className="jumbotron">
-        <h1>Clicky Cat</h1>
-        <p>Pet each kitty one time and one time only!</p>
-        <p>The game ends when you click any image more than once.</p>
-      </div>
-      <div className="imageGrid">
-        {/* TODO:
-        1. Create array of image objects (image, x-coor, y-coord, clicked t/f)
-        2. Use .map() to loop through each item in the array and
-        3. Assign a random number: Math.floor(Math.random()*10 +1)
-        */}
-        {
-          
-        }
-      </div>
-    </div>
-  );
+class App extends Component {
+  
+  constructor(props) {
+
+  }
+  // Initialize state
+  // this.state = {
+  //   cat: { clicked: false }
+  // }
+
+  handleClick() {
+    this.setState(
+      { clicked: true }
+    ), function() {
+      console.log("a cat was clicked");
+    }
+  };
+
+  // When this component mounts, grab the cat with 
+  // an _id of this.props.match.params.id
+  componentDidMount() {
+      
+  }
+
+  // TODO:
+  // 1. Create array of image objects (image, x-coor, y-coord, clicked t/f)
+  // 2. Use .map() to loop through each item in the array and
+  // 3. Assign a random number: Math.floor(Math.random()*10 +1)
 }
 
-export default App;
+export default function App() {
+  return (
+    <ScreenClassProvider>
+      <Header />
+      <Page />
+      <Footer />
+    </ScreenClassProvider>
+  );
+}
