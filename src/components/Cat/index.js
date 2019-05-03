@@ -128,7 +128,8 @@ class Cat extends React.Component {
 
         return(
             <div className="cat">
-                <img src={ image } className="clicked">
+                <img src={image} className="clicked">
+                
                 </img>
             </div>
         );
