@@ -1,10 +1,20 @@
 import React from "react";
-import "./App.css";
-// import { ScreenClassProvider } from 'react-grid-system';
-// import { Container, Row, Col } from "../src/components/Grid/index";
+import Navbar from "./components/Navbar/index";
+import Jumbotron from "./components/Jumbotron/index";
+import Grid from "./components/Grid/index";
+import Footer from "./components/Footer/index";
 
-function App() {
-
+class App extends React.Component {
+  render() {
+    return(
+      <div>
+        <Jumbotron/>
+        <Navbar/>
+        <Grid/>
+        <Footer/>
+      </div>
+    )
+  }
 }
 
 export default App;
