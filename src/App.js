@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "./components/Navbar/index";
 import Jumbotron from "./components/Jumbotron/index";
-import Grid from "./components/Grid/index";
+import { Container } from "./components/Grid";
 import Footer from "./components/Footer/index";
 
 class App extends React.Component {
@@ -10,7 +10,7 @@ class App extends React.Component {
       <div>
         <Jumbotron/>
         <Navbar/>
-        <Grid/>
+        <Container />
         <Footer/>
       </div>
     )

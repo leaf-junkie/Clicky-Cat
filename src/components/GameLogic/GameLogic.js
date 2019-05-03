@@ -1,6 +1,6 @@
 import React from "react";
 import Cat from "../Cat/index";
-import { Row } from "react-grid-system";
+import { Container, Col, Row } from "./components/Grid";
 
 class GameLogic extends React.Component {
     state = {
@@ -27,6 +27,7 @@ class GameLogic extends React.Component {
         this.shuffle();
     }
 
+    // Shuffle cats when an image is clicked
     shuffle = () => {
         let arr = this.state.cats;
         for (let i = arr.length - 1; i > 0; i - 1) {
@@ -38,6 +39,7 @@ class GameLogic extends React.Component {
         });
     }
 
+    // Check if image has been clicked
     clickCat = (event) => {
         let id = event.target.id;
         let randomNum = Math.floor((Math.random() * 5) + 1);
@@ -53,18 +55,17 @@ class GameLogic extends React.Component {
 
     render() {
         return (
-        <div>
-            <div className={Container}>
-                <div className={Row}>
-                    <Cat
-                        id={Cat.id}
-                        image={Cat.image}
-                        clicked={Cat.clicked}
-                    />
-                </div>
-            </div>
-        </div>
-    
+            <Container fluid>
+                <Row>
+                    <Col size="md-3">
+                        <Cat
+                            id={Cat.id}
+                            image={Cat.image}
+                            clicked={Cat.clicked}
+                        />
+                    </Col>
+                </Row>
+            </Container>
 
     // Cat array with id, url, and tracks whethere image has been clicked
     const catArr = [
