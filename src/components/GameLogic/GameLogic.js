@@ -1,8 +1,8 @@
 import React from "react";
-import Cat from "../Cat/index";
+import Cat from "../Cat";
 import cats from "../../../src/cats.json";
 
-import { Container, Col, Row } from "./components/Grid";
+import { Container, Col, Row } from "../Grid";
 
 class GameLogic extends React.Component {
     state = {
@@ -12,27 +12,27 @@ class GameLogic extends React.Component {
       clicked: []
     }  
 
+    // This seems to break things
     componentWillMount() {
         this.shuffle();
     }
 
-    gameOver = () => {
-        // ternary operator
+    // gameOver = () => {
+    //
+    // }
 
-    }
-
-    resetGame = () => {
-        this.setState({
-            score: 0,
-            clicked: []
-        });
-        this.shuffle();
-    }
+    // resetGame = () => {
+    //     this.setState({
+    //         score: 0,
+    //         clicked: []
+    //     });
+    //     this.shuffle();
+    // }
 
     // Shuffle cats when an image is clicked
     shuffle = () => {
         let arr = this.state.cats;
-        for (let i = arr.length - 1; i > 0; i - 1) {
+        for (let i = arr.length - 1; i > 0; i --) {
             const j = Math.floor(Math.random() * (i + 1));
             [arr[i], arr[j]] = [arr[j], arr[i]];
         }
@@ -60,11 +60,16 @@ class GameLogic extends React.Component {
             <Container fluid>
                 <Row>
                     <Col size="md-3">
-                        <Cat
-                            id={Cat.id}
-                            image={Cat.image}
-                            clicked={Cat.clicked}
-                        />
+                        {this.state.cats.map((kitty, index) => {
+                            return(
+                            <Cat
+                                clickCat={this.clickCat.bind(this)}
+                                id={kitty.id}
+                                key={kitty.id}
+                                image={kitty.image}
+                                clicked={kitty.clicked}
+                            />
+                        )})}
                     </Col>
                 </Row>
             </Container>

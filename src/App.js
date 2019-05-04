@@ -1,16 +1,18 @@
 import React from "react";
-import Navbar from "./components/Navbar/index";
+import Score from "./components/Score/index";
 import Jumbotron from "./components/Jumbotron/index";
 import { Container } from "./components/Grid";
 import Footer from "./components/Footer/index";
+import GameLogic from "./components/GameLogic/GameLogic"
 
 class App extends React.Component {
   render() {
     return(
       <div>
         <Jumbotron/>
-        <Navbar/>
-        <Container />
+        <Score/>
+        {/* <Container /> */}
+        <GameLogic/>
         <Footer/>
       </div>
     )

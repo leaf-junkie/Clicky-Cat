@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "image": "../Images/cat-0.jpg", 
+        "image": "Images/cat-0.jpg", 
         "clicked": false
     },
     {
@@ -62,8 +62,6 @@
     {
         "id": 13,
         "image": "../Images/cat-13.jpg",
-        "x": , 
-        "y": , 
         "clicked": false
     },
     {

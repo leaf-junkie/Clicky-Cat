@@ -1,13 +1,11 @@
 import React from "react";
-import { Shuffle } from "";
 
 class Cat extends React.Component {
     render() {
-        
-        return(
+        return (
             <div className="cat">
                 <img 
-                    src={image} 
+                    src={this.props.image} 
                     className="clicked" 
                     alt="cat"
                 >
