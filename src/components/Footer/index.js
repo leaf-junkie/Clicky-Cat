@@ -3,8 +3,8 @@ import style from "./style.css"
 
 const Footer = () => {
     return (
-        <footer className="navbar navbar-light bg-light text-secondary text-center">
-            <p>Julie Ragsdale | 2019</p>
+        <footer className="bg-light text-secondary text-center">
+            <p><a href="https://github.com/leaf-junkie/Clicky-Cat" target="_blank">Julie Ragsdale</a> | 2019</p>
         </footer>
     );
 } 
