@@ -8,29 +8,35 @@ class GameLogic extends React.Component {
       score: 0,  
       highScore: 0,
       cats: cats,
-      clicked: []
+      selected: []
     }  
 
     componentWillMount() {
         this.shuffle();
     }
 
-    // gameOver = () => {
-    //
-    // }
-
-    resetGame = () => {
+    resetGame() {
         this.setState({
             score: 0,
-            clicked: []
+            selected: []
         });
         this.shuffle();
+    }
+
+    win = () => {
+        alert("W I N N E R");
+        this.resetGame();
+    }
+
+    lose = () => {
+        alert("G A M E   O V E R");
+        this.resetGame();
     }
 
     // Shuffle cats when an image is clicked
     shuffle = () => {
         let arr = this.state.cats;
-        for (let i = arr.length - 1; i > 0; i --) {
+        for (let i = arr.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
             [arr[i], arr[j]] = [arr[j], arr[i]];
         }
@@ -42,13 +48,13 @@ class GameLogic extends React.Component {
     // Check if image has been clicked
     clickCat = (event) => {
         let id = event.target.id;
-        let randomNum = Math.floor((Math.random() * 5) + 1);
-        // make ternary operator
-        if(this.state.clicked.includes(id)) {
+        if(this.state.selected.includes(id)) {
             this.lose();
+        } else if (this.state.selected.length === 16) {
+            this.win()
         } else {
-            this.state.clicked.push(id);
-            this.setState({ score: this.state.score + randomNum });
+            this.state.selected.push(id);
+            this.setState({ score: this.state.score });
             this.shuffle();
         }
     }
@@ -65,7 +71,7 @@ class GameLogic extends React.Component {
                                 id={kitty.id}
                                 key={kitty.id}
                                 image={kitty.image}
-                                clicked={kitty.clicked}
+                                selected={kitty.selected}
                             />
                         )})}
                     </Col>

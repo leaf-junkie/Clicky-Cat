@@ -1,11 +1,15 @@
 import React from "react";
-import { clickCat } from "../GameLogic/GameLogic"
 
 class Cat extends React.Component {
+    componentDidMount() {
+        this.id = this.props.id
+    }
+
     render() {
         return (
             <div className="cat">
-                <img 
+                <img
+                    id={this.props.id}
                     src={this.props.image} 
                     className="clicked" 
                     alt="cat"
