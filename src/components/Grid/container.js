@@ -1,8 +1,8 @@
 import React from "react";
 
-export const Container = ({ fluid, children }) => {
+export const Container = ({ children }) => {
     return (
-        <div className={`container${fluid ? "-fluid" : ""}`}>
+        <div className="container">
             {children}
         </div>
     );

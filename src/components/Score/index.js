@@ -10,8 +10,16 @@ class Score extends React.Component {
     render() {
         return (
             <div>
-                <p onChange={this.handleChange.bind(this)} name="score">Score: {this.props.score}</p>
-                <p onChange={this.handleChange.bind(this)} name="highScore">High Score: {this.props.highScore}</p>
+                <p 
+                    name="score"
+                    onChange={this.handleChange.bind(this)}
+                >Score: {this.props.score}
+                </p>
+                <p 
+                    name="highScore"
+                    onChange={this.handleChange.bind(this)} 
+                >High Score: {this.props.highScore}
+                </p>
             </div>
         );
     }

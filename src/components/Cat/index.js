@@ -1,4 +1,5 @@
 import React from "react";
+import style from "./style.css"
 
 class Cat extends React.Component {
     componentDidMount() {
@@ -13,11 +14,6 @@ class Cat extends React.Component {
                     src={this.props.image} 
                     className="clicked" 
                     alt="cat"
-                    style={{ 
-                        maxWidth: 200, 
-                        margin: 8,
-                        borderRadius: 25 
-                    }}
                     onClick={this.props.clickCat}
                 >
                 </img>

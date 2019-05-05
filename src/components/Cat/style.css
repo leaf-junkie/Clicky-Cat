@@ -1,0 +1,11 @@
+img {
+    max-width: 200px;
+    margin: 8px;
+    border-radius: 25px;
+    float: left;
+    cursor: pointer;
+}
+
+img:hover {
+    opacity: 0.6;
+}

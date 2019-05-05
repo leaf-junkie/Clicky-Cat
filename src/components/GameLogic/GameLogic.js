@@ -2,6 +2,7 @@ import React from "react";
 import Cat from "../Cat";
 import cats from "../../../src/cats.json";
 import { Container, Col, Row } from "../Grid";
+import Score from "../Score";
 
 class GameLogic extends React.Component {
     state = {
@@ -47,36 +48,50 @@ class GameLogic extends React.Component {
 
     // Check if image has been clicked
     clickCat = (event) => {
+        console.log(this.state.selected.length);
         let id = event.target.id;
         if(this.state.selected.includes(id)) {
             this.lose();
-        } else if (this.state.selected.length === 16) {
-            this.win()
         } else {
             this.state.selected.push(id);
-            this.setState({ score: this.state.score });
+            let score = this.state.score + 1;
+            let highScore = score > this.state.highScore ? score : this.state.highScore;
+            this.setState({ 
+                score, 
+                highScore
+            });
+            if (this.state.selected.length === 16) {
+                this.win();
+            }
             this.shuffle();
+
         }
     }
 
     render() {
         return (
-            <Container fluid>
-                <Row>
-                    <Col size="md-3">
-                        {this.state.cats.map((kitty, index) => {
-                            return(
-                            <Cat
-                                clickCat={this.clickCat.bind(this)}
-                                id={kitty.id}
-                                key={kitty.id}
-                                image={kitty.image}
-                                selected={kitty.selected}
-                            />
-                        )})}
-                    </Col>
-                </Row>
-            </Container>
+            <div>
+                <Score
+                    score={this.state.score}
+                    highScore={this.state.highScore}
+                />
+                <Container fluid>
+                    <Row>
+                        <Col>
+                            {this.state.cats.map((kitty, index) => {
+                                return(
+                                <Cat
+                                    clickCat={this.clickCat.bind(this)}
+                                    id={kitty.id}
+                                    key={kitty.id}
+                                    image={kitty.image}
+                                    selected={kitty.selected}
+                                />
+                            )})}
+                        </Col>
+                    </Row>
+                </Container>
+            </div>
         )
     }
 }
