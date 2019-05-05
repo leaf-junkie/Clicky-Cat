@@ -11,7 +11,7 @@ class App extends React.Component {
       <div>
         <Jumbotron/>
         <Score/>
-        {/* <Container /> */}
+        <Container/>
         <GameLogic/>
         <Footer/>
       </div>
