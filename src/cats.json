@@ -1,82 +1,62 @@
 [
     {
         "id": 1,
-        "image": "Images/cat-0.jpg", 
-        "clicked": false
+        "image": "Images/cat-0.jpg"
     },
     {
         "id": 2,
-        "image": "../Images/cat-1.jpg",
-        "clicked": false
+        "image": "../Images/cat-1.jpg"
     },
     {
         "id": 3,
-        "image": "../Images/cat-3.jpg",
-        "clicked": false
+        "image": "../Images/cat-3.jpg"
     },
     {
         "id": 4,
-        "image": "../Images/cat-4.jpg",
-        "clicked": false
-    },
-    {
-        "id": 5,
-        "image": "../Images/cat-5.jpg",
-        "clicked": false
+        "image": "../Images/cat-4.jpg"
     },
     {
         "id": 6,
-        "image": "../Images/cat-6.jpg",
-        "clicked": false
+        "image": "../Images/cat-6.jpg"
     },
     {
         "id": 7,
-        "image": "../Images/cat-7.jpg",
-        "clicked": false
+        "image": "../Images/cat-7.jpg"
     },
     {
         "id": 8,
-        "image": "../Images/cat-8.jpg",
-        "clicked": false
+        "image": "../Images/cat-8.jpg"
     },
     {
         "id": 9,
-        "image": "../Images/cat-9.jpg",
-        "clicked": false
+        "image": "../Images/cat-9.jpg"
     },
     {
         "id": 10,
-        "image": "../Images/cat-10.jpg",
-        "clicked": false
+        "image": "../Images/cat-10.jpg"
     },
     {
         "id": 11,
-        "image": "../Images/cat-11.jpg",
-        "clicked": false
+        "image": "../Images/cat-11.jpg"
     },
     {
         "id": 12,
-        "image": "../Images/cat-12.jpg",
-        "clicked": false
+        "image": "../Images/cat-12.jpg"
     },
     {
         "id": 13,
-        "image": "../Images/cat-13.jpg",
-        "clicked": false
+        "image": "../Images/cat-13.jpg"
     },
     {
         "id": 14,
-        "image": "../Images/cat-15.jpg",
-        "clicked": false
+        "image": "../Images/cat-15.jpg"
     },
     {
         "id": 15,
-        "image": "../Images/cat-16.png",
-        "clicked": false
+        "image": "../Images/cat-16.png"
     },
     {
         "id": 16,
-        "image": "../Images/cat-18.jpg",
-        "clicked": false
+        "image": "../Images/cat-18.jpg"
     }
 ]
