@@ -8,6 +8,7 @@ class Cat extends React.Component {
                     src={this.props.image} 
                     className="clicked" 
                     alt="cat"
+                    style={{ maxWidth: 200, margin: 8 }}
                 >
                 </img>
             </div>

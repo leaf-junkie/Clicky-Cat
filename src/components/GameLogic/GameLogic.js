@@ -1,7 +1,6 @@
 import React from "react";
 import Cat from "../Cat";
 import cats from "../../../src/cats.json";
-
 import { Container, Col, Row } from "../Grid";
 
 class GameLogic extends React.Component {
@@ -12,7 +11,6 @@ class GameLogic extends React.Component {
       clicked: []
     }  
 
-    // This seems to break things
     componentWillMount() {
         this.shuffle();
     }
@@ -21,13 +19,13 @@ class GameLogic extends React.Component {
     //
     // }
 
-    // resetGame = () => {
-    //     this.setState({
-    //         score: 0,
-    //         clicked: []
-    //     });
-    //     this.shuffle();
-    // }
+    resetGame = () => {
+        this.setState({
+            score: 0,
+            clicked: []
+        });
+        this.shuffle();
+    }
 
     // Shuffle cats when an image is clicked
     shuffle = () => {
