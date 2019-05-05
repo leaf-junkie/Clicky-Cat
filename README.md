@@ -2,7 +2,7 @@
 
 Play the game at https://leaf-junkie.github.io/Clicky-Cat/
 
-Clicky Cat is a click-based memory game. There are 16 images displayed on the screen. The objective is to click each image once.
+Clicky Cat is a click-based memory game. There are 15 images displayed on the screen. The objective is to click each image once and only once. The game is over as soon as you click any image a second time. See how high you can score!
 
 ------------------------------
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
