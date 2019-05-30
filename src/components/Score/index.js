@@ -9,27 +9,27 @@ class Score extends React.Component {
 
     render() {
         return (
-            <div className="container">
-                <span 
+            <div className="container" style={{textAlign:'center', display:'flex', flexDirection:'column', width:'100%', margin:'0 auto'}}>
+                <h5 
                     name="score"
                     onChange={this.handleChange.bind(this)}
                     style={{
-                        display: "block",
                         position: "relative",
-                        left: "1em"
+                        width:'100%', 
+                        margin:'0 auto'
                     }}
                 >Score: {this.props.score}
-                </span>
-                <span 
+                </h5>
+                <h5 
                     name="highScore"
                     onChange={this.handleChange.bind(this)} 
                     style={{
-                        display: "block",
                         position: "relative",
-                        left: "1em"
+                        width:'100%', 
+                        margin:'0 auto'
                     }}
                 >High Score: {this.props.highScore}
-                </span>
+                </h5>
             </div>
         );
     }

@@ -60,7 +60,7 @@ class GameLogic extends React.Component {
                 score, 
                 highScore
             });
-            if (this.state.selected.length === 16) {
+            if (this.state.selected.length === 15) {
                 this.win();
             }
             this.shuffle();
